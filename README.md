@@ -7,7 +7,7 @@ Projeto criado com foco no aprendizado de boas práticas e organização de uma 
 - C#
 - ASP.NET Core
 - Entity Framework Core
-- SQL Server
+- MySQL
 - Swagger
 
 ## Funcionalidades
