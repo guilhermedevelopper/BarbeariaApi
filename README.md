@@ -1,7 +1,7 @@
 # BarbeariaApi
 
-API REST desenvolvida em ASP.NET Core para gerenciamento de agendamentos de uma barbearia.
-Projeto criado com foco em aprendizado de boas práticas e organização de uma API backend.
+API REST desenvolvida em ASP.NET Core para gerenciamento de agendamentos de uma barbearia.  
+Projeto criado com foco no aprendizado de boas práticas e organização de uma API backend.
 
 ## Tecnologias utilizadas
 - C#
@@ -18,13 +18,13 @@ Projeto criado com foco em aprendizado de boas práticas e organização de uma 
 - Listagem de agendamentos com relacionamentos
 
 ## Estrutura do projeto
-- Controllers: endpoints da API
-- Services: regras de negócio
-- DTOs: objetos de transferência de dados
-- Models: entidades do domínio
+- **Controllers**: endpoints da API
+- **Services**: regras de negócio
+- **DTOs**: objetos de transferência de dados
+- **Models**: entidades do domínio
 
 ## Como executar
 1. Clone o repositório
-2. Configure a connection string no `appsettings.json`
+2. Configure a string de conexão no `appsettings.json`
 3. Execute o projeto no Visual Studio
 4. Acesse o Swagger para testar os endpoints
