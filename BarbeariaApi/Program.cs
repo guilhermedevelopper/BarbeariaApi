@@ -1,7 +1,7 @@
 using BarbeariaApi.Data;
 using BarbeariaApi.Services;
 using Microsoft.EntityFrameworkCore;
-
+using System.Reflection;
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("BarbeariaConnection");
@@ -19,7 +19,20 @@ builder.Services.AddScoped<AgendamentoService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "API Barbearia",
+        Version = "v1",
+        Description = "API para gerenciamento de clientes, barbeiros e agendamentos"
+    });
+
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    options.IncludeXmlComments(xmlPath);
+});
 
 var app = builder.Build();
 
